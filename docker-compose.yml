@@ -17,4 +17,9 @@ services:
  jenkins-ssh:
   image: jenkinsci/ssh-slave
   ports:
+   - 22:22
+ 
+ nginx:
+  build: nginx
+  ports :
    - 80:80
