@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+ jenkins:
+  image: jenkins:2.46.2
+  container_name: jenkins-master
+  ports:
+   - 8080:8080
+   - 50000:50000
+
+# jenkins-slave:
+#  image: jenkins-slave
+#  build: 
+#  context: jenkins-slave-halcon
+   
+ jenkins-ssh:
+  image: jenkinsci/ssh-slave
+  ports:
+   - 80:80
