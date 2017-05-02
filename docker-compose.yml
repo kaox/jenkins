@@ -9,17 +9,18 @@ services:
    - 8080:8080
    - 50000:50000
 
-# jenkins-slave:
-#  image: jenkins-slave
-#  build: 
-#  context: jenkins-slave-halcon
+ jenkins-slave:
+  image: jenkins-slave
+  build: 
+   context: jenkins-slave-halcon
    
- jenkins-ssh:
-  image: jenkinsci/ssh-slave
-  ports:
-   - 22:22
+# jenkins-ssh:
+#  image: jenkinsci/ssh-slave
+#  ports:
+#   - 22:22
  
  nginx:
   build: nginx
+  container_name: jenkins-nginx
   ports :
    - 80:80
