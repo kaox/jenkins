@@ -12,12 +12,7 @@ services:
  jenkins-slave:
   image: jenkins-slave
   build: 
-   context: jenkins-slave-halcon
-   
-# jenkins-ssh:
-#  image: jenkinsci/ssh-slave
-#  ports:
-#   - 22:22
+   context: jenkins-slave
  
  nginx:
   build: nginx
