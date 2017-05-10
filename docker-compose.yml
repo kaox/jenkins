@@ -3,19 +3,14 @@ version: '3'
 services:
 
  jenkins:
-  image: jenkins:2.46.2
-  container_name: jenkins-master
+  container_name: jenkins
+  build:
+   context: jenkins-master
   ports:
    - 8080:8080
    - 50000:50000
 
  jenkins-slave:
-  image: jenkins-slave
-  build: 
-   context: jenkins-slave
- 
- nginx:
-  build: nginx
-  container_name: jenkins-nginx
-  ports :
-   - 80:80
+  container_name: jenkins-slave
+  build:
+   context: jenkins-ant-slave

@@ -1,4 +1,4 @@
-FROM jenkinsci/ssh-slave
+FROM kaox/jenkins-slave
 
 #GIT
 RUN apt-get update && apt-get install -y git-core

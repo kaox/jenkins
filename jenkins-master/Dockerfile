@@ -1,4 +1,4 @@
-FROM jenkinsci/jenkins:2.58-alpine
+FROM jenkins:2.46.2
 
 ARG JENKINS_SHARE=/usr/share/jenkins/ref
 
@@ -14,7 +14,6 @@ COPY init.groovy.d/* "${JENKINS_SHARE}/init.groovy.d/"
 
 # Configure slaves and their corresponding keys
 COPY nodes "${JENKINS_SHARE}/nodes/"
-COPY ssh/ "${JENKINS_SHARE}/.ssh/"
 
 # Skip installation Wizard
 RUN echo 2.0 > "${JENKINS_SHARE}/jenkins.install.UpgradeWizard.state"
