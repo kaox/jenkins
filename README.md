@@ -30,7 +30,7 @@ $ docker-compose start
 $ docker-compose down
 ```
 
-###Bluemix
+### Bluemix
 
 ```
 # Logearse a Cloud Foundry
