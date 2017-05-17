@@ -29,3 +29,4 @@ RUN tar -zvxf liferay-plugins-sdk-6.2-ee-sp14-20151105114451508.tar.gz -C /home/
 	rm -f /tmp/bundles.tar.gz && \
 	rm -f /tmp/liferay-plugins-sdk-6.2-ee-sp14-20151105114451508.tar.gz
 COPY conf/ivy-settings.xml /home/jenkins/liferay-plugins-sdk-6.2-ee-sp14
+COPY conf/build.properties /home/jenkins/liferay-plugins-sdk-6.2-ee-sp14
